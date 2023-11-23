@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Мэйн страница{% endblock %}</title>
+    {% block links %}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    {% endblock %}
+</head>
+<body>
+
+    <header>
+        {% block header %}
+            {% include 'components/_header.html' %}
+        {% endblock %}
+    </header>
+
+    <nav>
+        <ul class="nav justify-content-end">
+          <li class="nav-item">
+            {% block link1 %}{% endblock %}
+          </li>
+          <li class="nav-item">
+            {% block link2 %}{% endblock %}
+          </li>
+          <li class="nav-item">
+            {% block link3 %}{% endblock %}
+          </li>
+          <li class="nav-item">
+            {% block link4 %}{% endblock %}
+          </li>
+        </ul>
+    </nav>
+
+
+    <div>
+        {% block content %}
+
+        {% endblock %}
+    </div>
+
+    <footer>
+        {% block footer %}
+            {% include 'components/_footer.html' %}
+        {% endblock %}
+    </footer>
+
+</body>
+</html>
